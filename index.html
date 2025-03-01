@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Digital+7&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #0f0f0f;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            border: 2px solid #00ff00;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            font-size: 20px;
+            background-color: #1a1a1a;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #ff0000;
+        }
+
+        .button {
+            font-family: 'Digital 7', monospace;
+            background-color: #00ff00;
+            color: black;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border: none;
+            font-size: 24px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff0000;
+        }
+
+        .output {
+            font-size: 20px;
+            font-family: 'OCR A', monospace;
+            color: #ff0000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <input type="number" id="fahrenheit" class="input-field" placeholder="Fahrenheit">
+        <input type="number" id="celsius" class="input-field" placeholder="Celsius">
+        <input type="number" id="kelvin" class="input-field" placeholder="Kelvin">
+        <button class="button" onclick="convertTemperature()">Convert</button>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
